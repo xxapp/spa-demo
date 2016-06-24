@@ -63,18 +63,18 @@ ajax({
         }
     });
     // 定义增加/修改状态
-    avalon.state('root.demo.edit', {
+    avalon.state('root.demo.form', {
         // 添加和修改在这里都实现为弹出框形式，所以不使用mmState的路由方法，
         // 进入增加/修改url不发生改变所以也不配置url。但注意template一定要写，切字符串不能为空（长度能为0）
         template: ' ',
         // 按需加载处理逻辑 
-        controllerProvider: require.async('/components/demo/edit', 'controller')
+        controllerProvider: require.async('/components/demo/form', 'controller')
     });
    ```
 
 *  添加菜单
 
-   在services/menuService.js中添加菜单项，对于简单的增删改查只需要增加一个进入列表页的一级菜单就可以
+   在services/menuService.js中添加菜单项，对于简单的增删改查只需要增加一个进入列表页的菜单就可以
 
    ``` js
     var menu = [{ // 一级菜单
@@ -102,10 +102,12 @@ ajax({
 
    在components目录下新建文件夹，如demo，再在新建的文件夹下新建文件
 
-   简单的增删改查需要新建4个文件，demo.html demo.js edit.html edit.js
+   简单的增删改查需要新建4个文件，demo.html demo.js form.html form.js
 
    html后缀的文件为模板，声明了avalon的ms-controller
 
    js后缀的文件，包括avalon viewmodel的定义，导出view和controller模块，controller中包含了当前页面的生命周期
 
-   具体见文件内容
+   具体使用方法见demo
+
+   注，目前还没实现表单验证
