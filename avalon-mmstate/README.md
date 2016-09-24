@@ -1,4 +1,6 @@
 # 前端开发文档
+**注：此文档不适用于与组件结合的项目**
+
 用到的框架：avalonjs、mmState、beyond admin ui
 
 以及它们所依赖的库和插件
