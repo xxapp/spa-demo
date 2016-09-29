@@ -37,7 +37,7 @@
     进入到前端项目目录，在控制台执行FIS的发布命令：
     ``` bash
     # for windows
-    fis3 release local-server -w -d %ECLIPSE_DEPLOY%/privilege/pcadmin
+    fis3 release local-server -w -d %ECLIPSE_DEPLOY%\privilege\pcadmin
     # for unix like
     fis3 release local-server -w -d $ECLIPSE_DEPLOY/privilege/pcadmin
 
